@@ -1,0 +1,7 @@
+{
+  "name": "catListingApp",
+  "integrations": {
+    "capacitor": {}
+  },
+  "type": "angular"
+}
