@@ -1,0 +1,39 @@
+ion-content {
+    display: flex;
+    flex-direction: column;
+    height: 100vh;
+    margin-left: 20px;
+    margin-right: 20px;
+  }
+  
+  .main-content {
+    background-color: rgb(116, 141, 155);
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+  }
+  
+  .welcomeTo {
+    background-color: azure;
+    font-weight: bold;
+    height: 50vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    color: black;
+    width: 80%; /* Ensure the welcomeTo div takes full width */
+    flex-direction: column; /* Add this line to stack children vertically */
+  }
+
+  
+
+  h1{
+    font-weight:bold;
+  }
+  p{
+    font-style: italic;
+  }
+  

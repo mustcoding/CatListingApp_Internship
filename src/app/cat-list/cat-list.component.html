@@ -1,0 +1,84 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title>Cat Listing</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <!-- Main Content Area -->
+  <div class="main-content">
+    <br>
+
+    <div class="search-container">
+      <br>
+      <div style="display: flex; align-items: center;">
+        <ion-searchbar [(ngModel)]="searchTerm" (ionInput)="filterCats()" placeholder="Search"></ion-searchbar>
+        <span style="background-color: rgb(107, 43, 226); padding: 10px; border-top-right-radius: 20%; border-end-end-radius: 20%; margin-left: -30px;">
+          <ion-icon name="search" slot="start"></ion-icon>
+        </span>
+      </div>
+      <br>
+      <ion-button class="filter" fill="outline" color="primary" (click)="filterCats()" style="margin-left: 10px;">Search by Breed</ion-button>
+      <br>
+      <br>
+    </div>
+
+    <br>
+    <br>
+
+    <div class="cat-list">
+      <ion-grid>
+        
+        <ion-row class="header-row">
+          <ion-col><strong>BIL</strong></ion-col>
+          <ion-col><strong>BREED</strong></ion-col>
+          <ion-col><strong>COUNTRY</strong></ion-col>
+          <ion-col><strong>ORIGIN</strong></ion-col>
+          <ion-col><strong>COAT</strong></ion-col>
+          <ion-col><strong>PATTERN</strong></ion-col>
+        </ion-row>
+        <ion-row *ngFor="let cat of filteredCats; let i = index" [ngClass]="{ 'white-row': i % 2 === 0, 'blue-row': i % 2 !== 0 }">
+          <ion-col>{{ getStartingNumber() + i }}</ion-col>
+          <ion-col>{{ cat.breed }}</ion-col>
+          <ion-col>{{ cat.country }}</ion-col>
+          <ion-col>{{ cat.origin }}</ion-col>
+          <ion-col>
+            <div class="coat-container">
+              {{ cat.coat }}
+            </div>
+          </ion-col>
+          <ion-col>{{ cat.pattern }}</ion-col>
+        </ion-row>
+      </ion-grid>
+      
+      <br>
+
+      <div class="accessories">
+        <div class="submit-container">
+          <!-- Select Page Dropdown -->
+          <div class="select-page">
+            <select (change)="goToPage($event)">
+              <option *ngFor="let page of pageNumbers()" [value]="page">{{ page }}</option>
+            </select>
+          </div>
+        
+          <!-- Pagination Info -->
+          <div class="pagination-info">
+            Page {{ currentPage }} of {{ totalPages }}
+          </div>
+      
+        </div>
+        
+        <!-- Pagination Buttons -->
+        <div class="pagination-container">
+          <ion-button fill="outline" color="primary" (click)="previousPage()" class="pagination-button">&#60;</ion-button>
+          <ion-button fill="outline" color="primary" (click)="nextPage()" class="pagination-button">&#62;</ion-button>
+        </div>
+      </div>
+      
+
+      <br>
+    </div>
+
+  </div>
+</ion-content>
