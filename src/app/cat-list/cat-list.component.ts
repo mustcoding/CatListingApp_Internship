@@ -10,6 +10,7 @@ export class CatListComponent implements OnInit {
   cats: any[] = [];
   filteredCats: any[] = [];
   searchTerm: string = '';
+  filterType: string = 'breed'; // Add this property to keep track of the selected filter type
   currentPage: number = 1;
   totalPages: number = 1;
   itemsPerPage: number = 5;
@@ -33,13 +34,15 @@ export class CatListComponent implements OnInit {
 
   filterCats() {
     console.log('Search Term:', this.searchTerm);
+    console.log('Filter Type:', this.filterType);
     console.log('All Cats:', this.cats);
-  
-    const filtered = this.cats.filter((cat) =>
-      cat.breed.toLowerCase().includes(this.searchTerm.toLowerCase())
-    );
+    
+    const filtered = this.cats.filter((cat) => {
+      const value = cat[this.filterType].toLowerCase();
+      return value.includes(this.searchTerm.toLowerCase());
+    });
     console.log('Filtered Cats:', filtered);
-  
+
     this.filteredCats = filtered.slice(
       (this.currentPage - 1) * this.itemsPerPage,
       this.currentPage * this.itemsPerPage
@@ -69,7 +72,7 @@ export class CatListComponent implements OnInit {
   pageNumbers(): number[] {
     return Array(this.totalPages).fill(0).map((x, i) => i + 1);
   }
-  
+
   goToPage(event: any) {
     const pageNumber = event.target.value;
     this.currentPage = pageNumber;

@@ -7,7 +7,8 @@ ion-content {
 }
 
 .main-content {
-  background-color: rgb(116, 141, 155);
+  //background-color: rgb(116, 141, 155);
+  background-color: rgb(234, 239, 240);
   height: 100vh;
   padding: 20px;
 }
@@ -18,6 +19,11 @@ ion-searchbar {
   margin-right: 20px;
   align-items: center;
   max-width: 1100px;
+}
+
+ion-title {
+  color: black;
+  font-weight: bold;
 }
 
 ion-grid {
@@ -50,7 +56,7 @@ ion-button {
 }
 
 .header-row {
-  background-color: rgb(198, 223, 252); /* New color for header row */
+  background-color: rgb(179, 201, 224); /* New color for header row */
   color: black; /* Text color for header row */
 }
 
@@ -67,7 +73,7 @@ ion-button {
   color: rgb(207, 46, 153);
   font-weight: bold;
   border-radius: 40%;
-  width:fit-content;
+  width: fit-content;
   padding: 5px; /* Adjust padding as needed */
 }
 
@@ -93,42 +99,87 @@ ion-button {
   justify-content: space-between; /* Ensure items are spaced evenly */
   margin-left: 10px; /* Adjust margin as needed */
   margin-right: 10px; /* Adjust margin as needed */
+}
 
-  .submit-container{
-    display: flex;
-    align-items: center;
-    justify-content: space-between; /* Ensure items are spaced evenly */
-    margin-left: 10px; /* Adjust margin as needed */
-    margin-right: 10px;
-  }
-  .select-page {
-    margin-right: 10px; /* Add some space between dropdown and pagination info */
-    position: relative; /* Ensure relative positioning for the dropdown */
-    width: 50px; /* Adjust width as needed */
-    
-    select {
-      width: 100%;
-      padding: 8px;
-      border-radius: 10px; /* Adjust border radius as needed */
-      border: 1px solid #ccc; /* Example border styling */
-      background-color: #fff; /* Example background color */
-      outline: none; /* Remove default outline */
-    }
-  }
+.submit-container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between; /* Ensure items are spaced evenly */
+  margin-left: 10px; /* Adjust margin as needed */
+  margin-right: 10px;
+}
 
-  .pagination-info {
-    color: black; /* Example styling */
-    font-weight: bold; /* Example styling */
+.select-page {
+  margin-right: 10px; /* Add some space between dropdown and pagination info */
+  position: relative; /* Ensure relative positioning for the dropdown */
+  width: 50px; /* Adjust width as needed */
+  height: 40px;
+  select {
+    width: 100%;
+    padding: 8px;
+    border-radius: 10px; /* Adjust border radius as needed */
+    border: 1px solid #ccc; /* Example border styling */
+    background-color: #fff; /* Example background color */
+    outline: none; /* Remove default outline */
+    height: 35px;
   }
+}
 
-  .pagination-container {
-    display: flex;
-    align-items: center;
-  }
+.pagination-info {
+  color: black; /* Example styling */
 
-  .pagination-button {
-    --border-radius: 40%; /* Adjust button styling */
-    margin-left: 10px; /* Add space between buttons */
-  }
+}
+
+.pagination-container {
+  display: flex;
+  align-items: center;
+}
+
+.pagination-button::part(native) {
+  background-color: rgb(107, 43, 226);
+  color: white;
+  border: none;
+}
+
+.filter-dropdown-container {
+  display: flex;
+  align-items: center;
+  background-color: rgb(179, 201, 224);
+  border: 1px solid rgb(140, 141, 141);
+  border-radius: 10px; /* Adjust border radius as needed */
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Add box shadow */
+  padding: 5px 15px; /* Adjust padding as needed */
+  max-width: fit-content; /* Ensure the container fits its content */
+  white-space: nowrap; /* Prevent wrapping */
+  margin-left: 20px;
+  height: 40px;
+}
+
+.search-by-label {
+  margin-right: 10px;
+  color: black;
+  
+}
+
+
+
+ion-select {
+  --padding-start: 10px;
+  --padding-end: 10px;
+  --placeholder-color: black;
+  --placeholder-font-weight: bold;
+  color: black;
+}
+
+ion-select::part(placeholder) {
+  color: black;
+}
+
+ion-select::part(icon) {
+  color: black;
+}
+
+ion-select::part(text) {
+  font-weight: bold; /* Make selected option text bold */
 }
 

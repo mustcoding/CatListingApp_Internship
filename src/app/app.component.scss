@@ -14,4 +14,6 @@ html, body, ion-app, ion-content {
     max-width: 200px;
   }
 
-  
+  .sub-ion {
+    --inner-border-width: 0px;
+  }

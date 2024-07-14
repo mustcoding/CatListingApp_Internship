@@ -18,7 +18,16 @@
         </span>
       </div>
       <br>
-      <ion-button class="filter" fill="outline" color="primary" (click)="filterCats()" style="margin-left: 10px;">Search by Breed</ion-button>
+      <div class="filter-dropdown-container">
+        <span class="search-by-label">Search by</span>
+        <ion-select [(ngModel)]="filterType" interface="popover" placeholder="Select" (ionChange)="filterCats()">
+          <ion-select-option value="breed">Breed</ion-select-option>
+          <ion-select-option value="country">Country</ion-select-option>
+          <ion-select-option value="origin">Origin</ion-select-option>
+          <ion-select-option value="coat">Coat</ion-select-option>
+          <ion-select-option value="pattern">Pattern</ion-select-option>
+        </ion-select>
+      </div>
       <br>
       <br>
     </div>
@@ -28,7 +37,6 @@
 
     <div class="cat-list">
       <ion-grid>
-        
         <ion-row class="header-row">
           <ion-col><strong>BIL</strong></ion-col>
           <ion-col><strong>BREED</strong></ion-col>
