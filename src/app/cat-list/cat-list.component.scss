@@ -56,16 +56,16 @@ ion-button {
 }
 
 .header-row {
-  background-color: rgb(179, 201, 224); /* New color for header row */
-  color: black; /* Text color for header row */
+  background-color: rgb(179, 201, 224); //background colour for header row
+  color: black; //text colour for header row
 }
 
 .white-row {
-  background-color: white; /* White background for odd-indexed rows */
+  background-color: white; //White background for odd-indexed rows
 }
 
 .blue-row {
-  background-color: whitesmoke; /* Blue background for even-indexed rows */
+  background-color: whitesmoke; // whitesmoke background for even-indexed rows
 }
 
 .coat-container {
@@ -74,7 +74,7 @@ ion-button {
   font-weight: bold;
   border-radius: 40%;
   width: fit-content;
-  padding: 5px; /* Adjust padding as needed */
+  padding: 5px; 
 }
 
 .pagination-info {
@@ -96,37 +96,37 @@ ion-button {
 .accessories {
   display: flex;
   align-items: center;
-  justify-content: space-between; /* Ensure items are spaced evenly */
-  margin-left: 10px; /* Adjust margin as needed */
-  margin-right: 10px; /* Adjust margin as needed */
+  justify-content: space-between; 
+  margin-left: 10px; 
+  margin-right: 10px; 
 }
 
 .submit-container {
   display: flex;
   align-items: center;
-  justify-content: space-between; /* Ensure items are spaced evenly */
-  margin-left: 10px; /* Adjust margin as needed */
+  justify-content: space-between; //Ensure items are spaced evenly 
+  margin-left: 10px; 
   margin-right: 10px;
 }
 
 .select-page {
-  margin-right: 10px; /* Add some space between dropdown and pagination info */
-  position: relative; /* Ensure relative positioning for the dropdown */
-  width: 50px; /* Adjust width as needed */
+  margin-right: 10px; 
+  position: relative; //Ensure relative positioning for the dropdown
+  width: 50px; 
   height: 40px;
   select {
     width: 100%;
     padding: 8px;
-    border-radius: 10px; /* Adjust border radius as needed */
-    border: 1px solid #ccc; /* Example border styling */
-    background-color: #fff; /* Example background color */
-    outline: none; /* Remove default outline */
+    border-radius: 10px;
+    border: 1px solid #ccc; 
+    background-color: #fff; 
+    outline: none; 
     height: 35px;
   }
 }
 
 .pagination-info {
-  color: black; /* Example styling */
+  color: black; 
 
 }
 
@@ -146,11 +146,11 @@ ion-button {
   align-items: center;
   background-color: rgb(179, 201, 224);
   border: 1px solid rgb(140, 141, 141);
-  border-radius: 10px; /* Adjust border radius as needed */
-  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Add box shadow */
-  padding: 5px 15px; /* Adjust padding as needed */
-  max-width: fit-content; /* Ensure the container fits its content */
-  white-space: nowrap; /* Prevent wrapping */
+  border-radius: 10px; 
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); //Add box shadow
+  padding: 5px 15px; 
+  max-width: fit-content; //Ensure the container fits its content 
+  white-space: nowrap; 
   margin-left: 20px;
   height: 40px;
 }
@@ -180,6 +180,6 @@ ion-select::part(icon) {
 }
 
 ion-select::part(text) {
-  font-weight: bold; /* Make selected option text bold */
+  font-weight: bold; // Make selected option text bold
 }
 
